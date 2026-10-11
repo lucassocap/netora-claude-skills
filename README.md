@@ -59,6 +59,15 @@ Compare the fiscal regime of Venezuela vs Colombia for a 5000 bopd field.
 
 See [`examples/`](examples/) for complete walkthroughs.
 
+## Netora Odoo (read-only) MCP
+
+Field **actuals** (daily drilling reports, costs, daily production, work orders, contracts) live in Netora
+Odoo and are exposed by a second, read-only MCP: **netora-odoo-mcp** (41 tools). Add it as a custom
+connector (URL `https://<host-del-mcp>/mcp`, bearer token `nom_…` issued per person) and use
+[`skills/odoo/odoo-readonly-review.md`](skills/odoo/odoo-readonly-review.md) and
+[`knowledge/07-odoo-mcp-tool-catalog.md`](knowledge/07-odoo-mcp-tool-catalog.md). `find_upstream_link`
+returns the ids to chain both MCPs (plan in Upstream, actuals in Odoo). No token appears in this repository.
+
 ## Repository Structure
 
 ```
